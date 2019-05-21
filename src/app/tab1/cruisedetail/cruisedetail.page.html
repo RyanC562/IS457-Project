@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/tabs/tab1"></ion-back-button>
+    </ion-buttons>
+    <ion-title>{{cruise.title}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+    <ion-grid>
+        <ion-row>
+          <ion-col size-sm="6" offset-sm="3">
+              <img src={{cruise.image}}>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col size-sm="6" offset-sm="3" text-center>
+            <p>{{cruise.description}}</p>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col size-sm="6" offset-sm="3" text-center>
+              <ion-button margin (click)="onBookCruise()">Book</ion-button>
+          </ion-col>
+        </ion-row>    
+      </ion-grid>  
+    </ion-content>
